@@ -1,3 +1,8 @@
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+
 from selenium import webdriver
 import unittest
 
@@ -25,7 +30,7 @@ class NewVisitorTest(unittest.TestCase):
 
         # Od razu zostaje zachęcona, aby wpisać rzecz do zrobienia.
         inputbox = self.browser.find_element_by_id('id_new_item')
-        self.assertEqual(inputbox.get_attribute('placeholder'), 'Wpisz rzeczy do zrobienia')
+        self.assertEqual(inputbox.get_attribute('placeholder'), 'Wpisz rzecz do zrobienia')
 
         # W polu tekstowym wpisała "Kupić pawie pióra"
         # (hobby Edyty polega na tworzeniu ozdobnych przynęt).
